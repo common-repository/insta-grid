@@ -1,0 +1,33 @@
+.insta-grid-wrap{
+	position:relative;
+	margin: var(--cfg-align, 0 auto);
+	width: var(--cfg-width);
+	padding-top: calc(var(--cfg-width)*var(--cfg-rows)/var(--cfg-cols));
+}
+
+.insta-grid-cnt{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.insta-grid-thumb{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	width: calc(100%/var(--cfg-cols) - 2px);
+	height: calc(100%/var(--cfg-rows) - 2px);
+	
+	transition: all .2s ease-in-out;
+}
+
+.insta-grid-thumb:hover{
+	transform: rotate(-3deg) scale(1.01);
+}
